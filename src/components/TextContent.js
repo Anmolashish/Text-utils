@@ -2,11 +2,25 @@ import React, { useState } from "react";
 
 export default function TextContent(props) {
   const upperCase = () => {
-    setText(text.toUpperCase());
+    const temp = text.toUpperCase();
+
+    if (temp === text) {
+      props.showAlert("Text is already Upper case", "warning");
+    } else {
+      setText(text.toUpperCase());
+      props.showAlert("Successfuly converted text to Upper case", "success");
+    }
   };
 
   const lowerCase = () => {
-    setText(text.toLowerCase());
+    const temp = text.toLowerCase();
+
+    if (temp === text) {
+      props.showAlert("Text is already Lower case", "warning");
+    } else {
+      setText(text.toLowerCase());
+      props.showAlert("Successfuly converted text to Lower case", "success");
+    }
   };
 
   const updateValue = (event) => {
