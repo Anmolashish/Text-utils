@@ -35,6 +35,37 @@ export default function Navbar(props) {
           </ul>
           <form className="d-flex" role="search">
             <div
+              className="Theme mx-3"
+              style={{
+                backgroundColor: "blue",
+                width: "20px",
+                height: "20px",
+                borderRadius: "20px",
+              }}
+              onClick={props.theme1}
+            ></div>
+            <div
+              className="Theme mx-3"
+              style={{
+                backgroundColor: "blue",
+                width: "20px",
+                height: "20px",
+                borderRadius: "20px",
+              }}
+              onClick={props.theme2}
+            ></div>
+            <div
+              className="Theme mx-3"
+              style={{
+                backgroundColor: "blue",
+                width: "20px",
+                height: "20px",
+                borderRadius: "20px",
+              }}
+              onClick={props.theme3}
+            ></div>
+
+            <div
               className={`form-check form-switch text-${
                 props.mode === "light" ? "dark" : "light"
               }`}

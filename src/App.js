@@ -32,6 +32,22 @@ function App() {
     }, 1500);
   };
 
+  const theme1 = () => {
+    setMode("primary");
+    document.body.style.backgroundColor = "blue";
+    showAlert("The theme is applied", "success");
+  };
+  const theme2 = () => {
+    setMode("success");
+    document.body.style.backgroundColor = "green";
+    showAlert("The theme is applied", "success");
+  };
+  const theme3 = () => {
+    setMode("danger");
+    document.body.style.backgroundColor = "red";
+    showAlert("The theme is applied", "success");
+  };
+
   return (
     <>
       <Navbar
@@ -39,6 +55,9 @@ function App() {
         mode={mode}
         toggleMode={toggleMode}
         showAlert={showAlert}
+        theme1={theme1}
+        theme2={theme2}
+        theme3={theme3}
       />
       <Alert alert={alert} />
       <div className="container">
